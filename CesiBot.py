@@ -1,10 +1,12 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
+
+bot = commands.Bot(".")
+
 import Risitas
 
 
-bot = commands.Bot(".")
 
 @bot.event
 async def on_ready():
@@ -53,5 +55,9 @@ async def leave(ctx):
 @bot.command()
 async def aled(ctx):
     await ctx.send("ALED")
+
+@bot.command(pass_context=True, aliases=['i', 'iss'])
+async def issou(ctx):
+    await Risitas._issou(ctx, bot)
 
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')
