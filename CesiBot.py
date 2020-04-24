@@ -64,8 +64,16 @@ async def mc(ctx):
 async def ftb(ctx):
     await Minecraft._ftb(ctx, bot)
 
-@bot.command(aliases=["snd", "sou"])
+@bot.command(aliases=["s", "snd", "sou"])
 async def sound(ctx, message = None):
+    channel = ctx.message.author.voice.channel
+    voice = get(bot.voice_clients, guild=ctx.guild)
+
+    if voice and voice.is_connected():
+        await voice.move_to(channel)
+    else:
+        voice = await channel.connect()
+
     await Sound._sound(ctx, bot, message)
 
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')
