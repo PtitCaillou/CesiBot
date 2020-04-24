@@ -5,7 +5,7 @@ sound   = {
     "sensibilite"   : "/resources/sound/Sensibilite.mp3",
     "pas_qualifie"  : "/resources/sound/Pas_Qualifie.mp3",
     "oof"           : "/resources/sound/oof.mp3",
-    "toctoc"        : "/resources/sound/Toctoc.mp3",
+    "toctoc"        : "/resources/sound/toctoc.mp3",
     "melepas"       : "/resources/sound/mou-melepas.mp3",
     "moi"           : "/resources/sound/mou-moi.mp3",
     "gifle"         : "/resources/sound/mou-gifle.mp3",
