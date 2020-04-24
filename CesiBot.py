@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord.utils import get
 
 # Local imports
-import Minecraft, Sound
+import Minecraft, Sound, SoundList, Weather
 
 bot = commands.Bot(".")
 
@@ -23,7 +23,7 @@ async def on_message(message):
         return
     await bot.process_commands(message)
 
-@bot.command(pass_context=True, aliases=['j', 'joi'])
+@bot.command(aliases=['j', 'joi'])
 async def join(ctx):
     channel = ctx.message.author.voice.channel
     voice = get(bot.voice_clients, guild=ctx.guild)
@@ -43,7 +43,7 @@ async def join(ctx):
 
     await ctx.send(f"Joined {channel}")
 
-@bot.command(pass_context=True, aliases=['l', 'lea'])
+@bot.command(aliases=['l', 'lea'])
 async def leave(ctx):
     channel = ctx.message.author.voice.channel
     voice = get(bot.voice_clients, guild=ctx.guild)
@@ -76,4 +76,13 @@ async def sound(ctx, message = None):
 
     await Sound._sound(ctx, bot, message)
 
+@bot.command(aliases=["sl", "slist", "sndlist"])
+async def soundlist(ctx):
+    sounds = "List of sounds :\n" + ", ".join([sound for sound in SoundList.sound])
+    await ctx.send(sounds)
+
+@bot.command(aliases=["meteo", "météo"])
+async def weather(ctx, message = None):
+    await Weather._weather(ctx, message)
+    
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')

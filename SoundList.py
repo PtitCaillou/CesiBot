@@ -1,4 +1,19 @@
 sound   = {
-    "issou"     : "/resources/sound/issou.mp3",
-    "temelepas" : "/resources/sound/TeMelepas.mp3"
+    "issou"         : "/resources/sound/issou.mp3",
+    "embrouille"    : "/resources/sound/mou-embrouillepas.mp3",
+    "sorciere"      : "/resources/sound/mou-sorciere.mp3",
+    "sensibilite"   : "/resources/sound/Sensibilite.mp3",
+    "pas_qualifie"  : "/resources/sound/Pas_Qualifie.mp3",
+    "oof"           : "/resources/sound/oof.mp3",
+    "toctoc"        : "/resources/sound/Toctoc.mp3",
+    "melepas"       : "/resources/sound/mou-melepas.mp3",
+    "moi"           : "/resources/sound/mou-moi.mp3",
+    "gifle"         : "/resources/sound/mou-gifle.mp3",
+    "ftg_toi"       : "/resources/sound/ftg_toi.mp3",
+    "ouais"         : "/resources/sound/ouais.mp3",
+    "zelda"         : "/resources/sound/zelda.mp3",
+    "thwomp"        : "/resources/sound/super-mario-64-thwomp-sound.mp3",
+    "denis"         : "/resources/sound/denis-brogniart-ah.mp3",
+    "toctoc1"        : "/resources/sound/toctoc1.mp3",
+    "hahaha"        : "/resources/sound/hahaha-song.mp3"
 }
