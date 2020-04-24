@@ -1,6 +1,4 @@
 import discord
-import CesiBot
-from CesiBot import bot
 from discord.ext import commands
 from discord.utils import get
 import os

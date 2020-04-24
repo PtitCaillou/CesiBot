@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
-from discord.ext import commands
 from discord.utils import get
+import Risitas
 
 
 bot = commands.Bot(".")
@@ -12,6 +12,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    if message.author == bot.user:
+        return
     await bot.process_commands(message)
 
 @bot.command(pass_context=True, aliases=['j', 'joi'])
