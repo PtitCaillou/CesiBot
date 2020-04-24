@@ -1,10 +1,15 @@
+# Native imports
+
+
+# Third party imports
 import discord
 from discord.ext import commands
 from discord.utils import get
 
-bot = commands.Bot(".")
+# Local imports
+import Minecraft, Risitas, Sound
 
-import Risitas
+bot = commands.Bot(".")
 
 
 
@@ -38,7 +43,6 @@ async def join(ctx):
 
     await ctx.send(f"Joined {channel}")
 
-
 @bot.command(pass_context=True, aliases=['l', 'lea'])
 async def leave(ctx):
     channel = ctx.message.author.voice.channel
@@ -52,12 +56,20 @@ async def leave(ctx):
         print("Bot was told to leave voice channel, but was not in one")
         await ctx.send("Don't think I am in a voice channel")
 
-@bot.command()
-async def aled(ctx):
-    await ctx.send("ALED")
-
 @bot.command(pass_context=True, aliases=['i', 'iss'])
 async def issou(ctx):
     await Risitas._issou(ctx, bot)
+
+@bot.command(aliases=["minecraft"])
+async def mc(ctx):
+    await Minecraft._mc(ctx, bot)
+
+@bot.command()
+async def ftb(ctx):
+    await Minecraft._ftb(ctx, bot)
+
+@bot.command(aliases=["snd", "sou"])
+async def sound(ctx, message = None):
+    await Sound._sound(ctx, bot, message)
 
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')
