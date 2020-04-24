@@ -5,6 +5,7 @@ from discord.utils import get
 bot = commands.Bot(".")
 
 import Risitas
+import Moundir
 
 
 
@@ -59,5 +60,9 @@ async def aled(ctx):
 @bot.command(pass_context=True, aliases=['i', 'iss'])
 async def issou(ctx):
     await Risitas._issou(ctx, bot)
+
+@bot.command(pass_context=True, aliases=['m', 'mele'])
+async def TeMelepas(ctx):
+    await Moundir._TeMelepas(ctx, bot)
 
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')
