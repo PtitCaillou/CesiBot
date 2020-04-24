@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord.utils import get
 
 # Local imports
-import Minecraft, Risitas, Sound
+import Minecraft, Sound
 
 bot = commands.Bot(".")
 
@@ -55,10 +55,6 @@ async def leave(ctx):
     else:
         print("Bot was told to leave voice channel, but was not in one")
         await ctx.send("Don't think I am in a voice channel")
-
-@bot.command(pass_context=True, aliases=['i', 'iss'])
-async def issou(ctx):
-    await Risitas._issou(ctx, bot)
 
 @bot.command(aliases=["minecraft"])
 async def mc(ctx):
