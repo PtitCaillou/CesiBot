@@ -4,7 +4,7 @@ sound   = {
     "ah"            : "/resources/sound/ah.mp3",
     "alerteGenerale": "/resources/sound/alerteGenerale.mp3",
     "armand"        : "/resources/sound/armand.mp3",
-    "coffin-dance"  : "/resources/sound/coffin-dance",
+    "coffin-dance"  : "/resources/sound/coffin-dance.mp3",
     "ctsur"         : "/resources/sound/ctsur.mp3",
     "d7"            : "/resources/sound/d7.mp3",
     "d7d8"          : "/resources/sound/d7d8.mp3",
