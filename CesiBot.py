@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord.utils import get
 
 # Local imports
-import Minecraft, Sound, SoundList, Weather
+import Games, Minecraft, Sound, SoundList, Weather
 
 bot = commands.Bot(".")
 
@@ -16,6 +16,7 @@ bot = commands.Bot(".")
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
+    dealer = Games.Dealer()
 
 @bot.event
 async def on_message(message):
@@ -85,4 +86,11 @@ async def soundlist(ctx):
 async def weather(ctx, message = None):
     await Weather._weather(ctx, message)
     
+@bot.command(aliases=["d", "deal"])
+async def dealer(ctx, message = None):
+    if message == None:
+        await ctx.send("Incorrect command...")
+    else:
+        await Games._dealer(ctx, message)
+
 bot.run('NzAzMTg1MzQ0NDA0OTE0MjY3.XqK6aA.b3hjFQZxb0YjgeX4UhdO211_-gY')
